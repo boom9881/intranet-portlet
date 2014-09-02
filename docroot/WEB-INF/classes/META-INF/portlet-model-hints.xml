@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.shuntian.portlet.intranet.model.Satff">
+		<field name="uuid" type="String" />
+		<field name="id" type="long" />
+		<field name="user_id" type="long" />
+		<field name="city" type="String" />
+		<field name="name" type="String" />
+		<field name="turnover_time" type="Date" />
+		<field name="entry_time" type="Date" />
+		<field name="base_pay" type="double" />
+		<field name="performance_pay" type="double" />
+		<field name="wage_subtotal" type="double" />
+		<field name="insurance_base" type="double" />
+		<field name="endowment_insurance" type="double" />
+		<field name="unemployment_insurance" type="double" />
+		<field name="work_injury_insurance" type="double" />
+		<field name="birth_insurance" type="double" />
+		<field name="medical_insurance" type="double" />
+		<field name="individual_insurance" type="double" />
+		<field name="housing_accumulation_fund_base" type="double" />
+		<field name="individual_pay" type="double" />
+		<field name="amount_payable" type="double" />
+		<field name="people_together" type="double" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+	</model>
+</model-hints>

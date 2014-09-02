@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="com.shuntian.portlet.intranet.model.Satff" />
+	<class name="com.shuntian.portlet.intranet.model.impl.SatffImpl" table="Intranet_Satff">
+		<cache usage="read-write" />
+		<id name="id" column="id_" type="long">
+			<generator class="assigned" />
+		</id>
+		<property name="uuid" type="com.liferay.portal.dao.orm.hibernate.StringType" column="uuid_" />
+		<property name="user_id" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="city" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="name" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="turnover_time" type="org.hibernate.type.TimestampType" />
+		<property name="entry_time" type="org.hibernate.type.TimestampType" />
+		<property name="base_pay" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="performance_pay" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="wage_subtotal" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="insurance_base" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="endowment_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="unemployment_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="work_injury_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="birth_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="medical_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="individual_insurance" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="housing_accumulation_fund_base" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="individual_pay" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="amount_payable" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="people_together" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="companyId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userId" type="com.liferay.portal.dao.orm.hibernate.LongType" />
+		<property name="userName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="createDate" type="org.hibernate.type.TimestampType" />
+		<property name="modifiedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

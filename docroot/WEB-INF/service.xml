@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+
+<service-builder package-path="com.shuntian.portlet.intranet">
+	<namespace>Intranet</namespace>
+	<entity name="Satff" uuid="true" local-service="true" remote-service="true" trash-enabled="true">
+
+		<!-- PK fields -->
+
+		<column name="id" type="long" primary="true" />
+
+		<!-- Resource -->
+
+		<column name="user_id" type="long" />
+
+		<!-- Other fields -->
+		<column name="city" type="String" />
+		<column name="name" type="String" />
+		<column name="turnover_time" type="Date" />
+		<column name="entry_time" type="Date" />
+		<column name="base_pay" type="double" />
+		<column name="performance_pay" type="double" />
+		<column name="wage_subtotal" type="double" />
+		<column name="insurance_base" type="double" />
+		<column name="endowment_insurance" type="double" />
+		<column name="unemployment_insurance" type="double" />
+		<column name="work_injury_insurance" type="double" />
+		<column name="birth_insurance" type="double" />
+		<column name="medical_insurance" type="double" />
+		<column name="individual_insurance" type="double" />
+		<column name="housing_accumulation_fund_base" type="double" />
+		<column name="individual_pay" type="double" />
+		<column name="amount_payable" type="double" />
+		<column name="people_together" type="double" />
+
+		<!-- Audit fields -->
+
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		<column name="createDate" type="Date" />
+		<column name="modifiedDate" type="Date" />
+		
+		<!-- Order -->
+
+		<order>
+			<order-column name="createDate" order-by="asc" />
+		</order>
+	</entity>
+</service-builder>

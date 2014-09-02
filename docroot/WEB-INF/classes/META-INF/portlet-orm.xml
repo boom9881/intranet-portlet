@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="com.shuntian.portlet.intranet.model.impl.SatffModelImpl">
+		<attributes>
+			<id name="id">
+				<column name="ID_" />
+			</id>
+			<basic name="uuid">
+				<column name="UUID_" />
+			</basic>
+			<basic name="user_id" />
+			<basic name="city" />
+			<basic name="name" />
+			<basic name="turnover_time">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="entry_time">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="base_pay" />
+			<basic name="performance_pay" />
+			<basic name="wage_subtotal" />
+			<basic name="insurance_base" />
+			<basic name="endowment_insurance" />
+			<basic name="unemployment_insurance" />
+			<basic name="work_injury_insurance" />
+			<basic name="birth_insurance" />
+			<basic name="medical_insurance" />
+			<basic name="individual_insurance" />
+			<basic name="housing_accumulation_fund_base" />
+			<basic name="individual_pay" />
+			<basic name="amount_payable" />
+			<basic name="people_together" />
+			<basic name="companyId" />
+			<basic name="userId" />
+			<basic name="userName" />
+			<basic name="createDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="modifiedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+			<transient name="userUuid" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="com.shuntian.portlet.intranet.model.impl.SatffImpl" name="Satff">
+		<table name="Intranet_Satff" />
+		<attributes />
+	</entity>
+</entity-mappings>
