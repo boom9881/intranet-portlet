@@ -20,6 +20,11 @@ import com.liferay.portal.kernel.messaging.Message;
 import com.shuntian.portlet.intranet.service.ClpSerializer;
 import com.shuntian.portlet.intranet.service.SatffLocalServiceUtil;
 import com.shuntian.portlet.intranet.service.SatffServiceUtil;
+import com.shuntian.portlet.intranet.service.basic_informationLocalServiceUtil;
+import com.shuntian.portlet.intranet.service.educationLocalServiceUtil;
+import com.shuntian.portlet.intranet.service.ext_informationLocalServiceUtil;
+import com.shuntian.portlet.intranet.service.familyLocalServiceUtil;
+import com.shuntian.portlet.intranet.service.workLocalServiceUtil;
 
 /**
  * @author Brian Wing Shun Chan
@@ -36,9 +41,18 @@ public class ClpMessageListener extends BaseMessageListener {
 
 		if (command.equals("undeploy") &&
 				servletContextName.equals(getServletContextName())) {
+			basic_informationLocalServiceUtil.clearService();
+
+			educationLocalServiceUtil.clearService();
+
+			ext_informationLocalServiceUtil.clearService();
+
+			familyLocalServiceUtil.clearService();
+
 			SatffLocalServiceUtil.clearService();
 
 			SatffServiceUtil.clearService();
+			workLocalServiceUtil.clearService();
 		}
 	}
 }

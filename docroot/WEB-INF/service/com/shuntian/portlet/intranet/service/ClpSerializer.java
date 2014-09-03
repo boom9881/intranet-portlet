@@ -26,6 +26,11 @@ import com.liferay.portal.kernel.util.Validator;
 import com.liferay.portal.model.BaseModel;
 
 import com.shuntian.portlet.intranet.model.SatffClp;
+import com.shuntian.portlet.intranet.model.basic_informationClp;
+import com.shuntian.portlet.intranet.model.educationClp;
+import com.shuntian.portlet.intranet.model.ext_informationClp;
+import com.shuntian.portlet.intranet.model.familyClp;
+import com.shuntian.portlet.intranet.model.workClp;
 
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -102,8 +107,28 @@ public class ClpSerializer {
 
 		String oldModelClassName = oldModelClass.getName();
 
+		if (oldModelClassName.equals(basic_informationClp.class.getName())) {
+			return translateInputbasic_information(oldModel);
+		}
+
+		if (oldModelClassName.equals(educationClp.class.getName())) {
+			return translateInputeducation(oldModel);
+		}
+
+		if (oldModelClassName.equals(ext_informationClp.class.getName())) {
+			return translateInputext_information(oldModel);
+		}
+
+		if (oldModelClassName.equals(familyClp.class.getName())) {
+			return translateInputfamily(oldModel);
+		}
+
 		if (oldModelClassName.equals(SatffClp.class.getName())) {
 			return translateInputSatff(oldModel);
+		}
+
+		if (oldModelClassName.equals(workClp.class.getName())) {
+			return translateInputwork(oldModel);
 		}
 
 		return oldModel;
@@ -121,10 +146,60 @@ public class ClpSerializer {
 		return newList;
 	}
 
+	public static Object translateInputbasic_information(BaseModel<?> oldModel) {
+		basic_informationClp oldClpModel = (basic_informationClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getbasic_informationRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputeducation(BaseModel<?> oldModel) {
+		educationClp oldClpModel = (educationClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.geteducationRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputext_information(BaseModel<?> oldModel) {
+		ext_informationClp oldClpModel = (ext_informationClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getext_informationRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputfamily(BaseModel<?> oldModel) {
+		familyClp oldClpModel = (familyClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getfamilyRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
 	public static Object translateInputSatff(BaseModel<?> oldModel) {
 		SatffClp oldClpModel = (SatffClp)oldModel;
 
 		BaseModel<?> newModel = oldClpModel.getSatffRemoteModel();
+
+		newModel.setModelAttributes(oldClpModel.getModelAttributes());
+
+		return newModel;
+	}
+
+	public static Object translateInputwork(BaseModel<?> oldModel) {
+		workClp oldClpModel = (workClp)oldModel;
+
+		BaseModel<?> newModel = oldClpModel.getworkRemoteModel();
 
 		newModel.setModelAttributes(oldClpModel.getModelAttributes());
 
@@ -149,8 +224,33 @@ public class ClpSerializer {
 		String oldModelClassName = oldModelClass.getName();
 
 		if (oldModelClassName.equals(
+					"com.shuntian.portlet.intranet.model.impl.basic_informationImpl")) {
+			return translateOutputbasic_information(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.shuntian.portlet.intranet.model.impl.educationImpl")) {
+			return translateOutputeducation(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.shuntian.portlet.intranet.model.impl.ext_informationImpl")) {
+			return translateOutputext_information(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.shuntian.portlet.intranet.model.impl.familyImpl")) {
+			return translateOutputfamily(oldModel);
+		}
+
+		if (oldModelClassName.equals(
 					"com.shuntian.portlet.intranet.model.impl.SatffImpl")) {
 			return translateOutputSatff(oldModel);
+		}
+
+		if (oldModelClassName.equals(
+					"com.shuntian.portlet.intranet.model.impl.workImpl")) {
+			return translateOutputwork(oldModel);
 		}
 
 		return oldModel;
@@ -234,11 +334,76 @@ public class ClpSerializer {
 		}
 
 		if (className.equals(
+					"com.shuntian.portlet.intranet.NoSuchbasic_informationException")) {
+			return new com.shuntian.portlet.intranet.NoSuchbasic_informationException();
+		}
+
+		if (className.equals(
+					"com.shuntian.portlet.intranet.NoSucheducationException")) {
+			return new com.shuntian.portlet.intranet.NoSucheducationException();
+		}
+
+		if (className.equals(
+					"com.shuntian.portlet.intranet.NoSuchext_informationException")) {
+			return new com.shuntian.portlet.intranet.NoSuchext_informationException();
+		}
+
+		if (className.equals(
+					"com.shuntian.portlet.intranet.NoSuchfamilyException")) {
+			return new com.shuntian.portlet.intranet.NoSuchfamilyException();
+		}
+
+		if (className.equals(
 					"com.shuntian.portlet.intranet.NoSuchSatffException")) {
 			return new com.shuntian.portlet.intranet.NoSuchSatffException();
 		}
 
+		if (className.equals(
+					"com.shuntian.portlet.intranet.NoSuchworkException")) {
+			return new com.shuntian.portlet.intranet.NoSuchworkException();
+		}
+
 		return throwable;
+	}
+
+	public static Object translateOutputbasic_information(BaseModel<?> oldModel) {
+		basic_informationClp newModel = new basic_informationClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setbasic_informationRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputeducation(BaseModel<?> oldModel) {
+		educationClp newModel = new educationClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.seteducationRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputext_information(BaseModel<?> oldModel) {
+		ext_informationClp newModel = new ext_informationClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setext_informationRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputfamily(BaseModel<?> oldModel) {
+		familyClp newModel = new familyClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setfamilyRemoteModel(oldModel);
+
+		return newModel;
 	}
 
 	public static Object translateOutputSatff(BaseModel<?> oldModel) {
@@ -247,6 +412,16 @@ public class ClpSerializer {
 		newModel.setModelAttributes(oldModel.getModelAttributes());
 
 		newModel.setSatffRemoteModel(oldModel);
+
+		return newModel;
+	}
+
+	public static Object translateOutputwork(BaseModel<?> oldModel) {
+		workClp newModel = new workClp();
+
+		newModel.setModelAttributes(oldModel.getModelAttributes());
+
+		newModel.setworkRemoteModel(oldModel);
 
 		return newModel;
 	}

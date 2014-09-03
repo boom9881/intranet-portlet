@@ -24,24 +24,24 @@ import java.util.Arrays;
  */
 public class SatffServiceClpInvoker {
 	public SatffServiceClpInvoker() {
-		_methodName20 = "getBeanIdentifier";
+		_methodName40 = "getBeanIdentifier";
 
-		_methodParameterTypes20 = new String[] {  };
+		_methodParameterTypes40 = new String[] {  };
 
-		_methodName21 = "setBeanIdentifier";
+		_methodName41 = "setBeanIdentifier";
 
-		_methodParameterTypes21 = new String[] { "java.lang.String" };
+		_methodParameterTypes41 = new String[] { "java.lang.String" };
 	}
 
 	public Object invokeMethod(String name, String[] parameterTypes,
 		Object[] arguments) throws Throwable {
-		if (_methodName20.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes20, parameterTypes)) {
+		if (_methodName40.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes40, parameterTypes)) {
 			return SatffServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName21.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes21, parameterTypes)) {
+		if (_methodName41.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes41, parameterTypes)) {
 			SatffServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
@@ -50,8 +50,8 @@ public class SatffServiceClpInvoker {
 		throw new UnsupportedOperationException();
 	}
 
-	private String _methodName20;
-	private String[] _methodParameterTypes20;
-	private String _methodName21;
-	private String[] _methodParameterTypes21;
+	private String _methodName40;
+	private String[] _methodParameterTypes40;
+	private String _methodName41;
+	private String[] _methodParameterTypes41;
 }

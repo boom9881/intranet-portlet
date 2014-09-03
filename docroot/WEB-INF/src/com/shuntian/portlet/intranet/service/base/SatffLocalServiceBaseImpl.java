@@ -35,6 +35,11 @@ import com.shuntian.portlet.intranet.model.Satff;
 import com.shuntian.portlet.intranet.service.SatffLocalService;
 import com.shuntian.portlet.intranet.service.persistence.SatffFinder;
 import com.shuntian.portlet.intranet.service.persistence.SatffPersistence;
+import com.shuntian.portlet.intranet.service.persistence.basic_informationPersistence;
+import com.shuntian.portlet.intranet.service.persistence.educationPersistence;
+import com.shuntian.portlet.intranet.service.persistence.ext_informationPersistence;
+import com.shuntian.portlet.intranet.service.persistence.familyPersistence;
+import com.shuntian.portlet.intranet.service.persistence.workPersistence;
 
 import java.io.Serializable;
 
@@ -301,6 +306,157 @@ public abstract class SatffLocalServiceBaseImpl extends BaseLocalServiceImpl
 	}
 
 	/**
+	 * Returns the basic_information local service.
+	 *
+	 * @return the basic_information local service
+	 */
+	public com.shuntian.portlet.intranet.service.basic_informationLocalService getbasic_informationLocalService() {
+		return basic_informationLocalService;
+	}
+
+	/**
+	 * Sets the basic_information local service.
+	 *
+	 * @param basic_informationLocalService the basic_information local service
+	 */
+	public void setbasic_informationLocalService(
+		com.shuntian.portlet.intranet.service.basic_informationLocalService basic_informationLocalService) {
+		this.basic_informationLocalService = basic_informationLocalService;
+	}
+
+	/**
+	 * Returns the basic_information persistence.
+	 *
+	 * @return the basic_information persistence
+	 */
+	public basic_informationPersistence getbasic_informationPersistence() {
+		return basic_informationPersistence;
+	}
+
+	/**
+	 * Sets the basic_information persistence.
+	 *
+	 * @param basic_informationPersistence the basic_information persistence
+	 */
+	public void setbasic_informationPersistence(
+		basic_informationPersistence basic_informationPersistence) {
+		this.basic_informationPersistence = basic_informationPersistence;
+	}
+
+	/**
+	 * Returns the education local service.
+	 *
+	 * @return the education local service
+	 */
+	public com.shuntian.portlet.intranet.service.educationLocalService geteducationLocalService() {
+		return educationLocalService;
+	}
+
+	/**
+	 * Sets the education local service.
+	 *
+	 * @param educationLocalService the education local service
+	 */
+	public void seteducationLocalService(
+		com.shuntian.portlet.intranet.service.educationLocalService educationLocalService) {
+		this.educationLocalService = educationLocalService;
+	}
+
+	/**
+	 * Returns the education persistence.
+	 *
+	 * @return the education persistence
+	 */
+	public educationPersistence geteducationPersistence() {
+		return educationPersistence;
+	}
+
+	/**
+	 * Sets the education persistence.
+	 *
+	 * @param educationPersistence the education persistence
+	 */
+	public void seteducationPersistence(
+		educationPersistence educationPersistence) {
+		this.educationPersistence = educationPersistence;
+	}
+
+	/**
+	 * Returns the ext_information local service.
+	 *
+	 * @return the ext_information local service
+	 */
+	public com.shuntian.portlet.intranet.service.ext_informationLocalService getext_informationLocalService() {
+		return ext_informationLocalService;
+	}
+
+	/**
+	 * Sets the ext_information local service.
+	 *
+	 * @param ext_informationLocalService the ext_information local service
+	 */
+	public void setext_informationLocalService(
+		com.shuntian.portlet.intranet.service.ext_informationLocalService ext_informationLocalService) {
+		this.ext_informationLocalService = ext_informationLocalService;
+	}
+
+	/**
+	 * Returns the ext_information persistence.
+	 *
+	 * @return the ext_information persistence
+	 */
+	public ext_informationPersistence getext_informationPersistence() {
+		return ext_informationPersistence;
+	}
+
+	/**
+	 * Sets the ext_information persistence.
+	 *
+	 * @param ext_informationPersistence the ext_information persistence
+	 */
+	public void setext_informationPersistence(
+		ext_informationPersistence ext_informationPersistence) {
+		this.ext_informationPersistence = ext_informationPersistence;
+	}
+
+	/**
+	 * Returns the family local service.
+	 *
+	 * @return the family local service
+	 */
+	public com.shuntian.portlet.intranet.service.familyLocalService getfamilyLocalService() {
+		return familyLocalService;
+	}
+
+	/**
+	 * Sets the family local service.
+	 *
+	 * @param familyLocalService the family local service
+	 */
+	public void setfamilyLocalService(
+		com.shuntian.portlet.intranet.service.familyLocalService familyLocalService) {
+		this.familyLocalService = familyLocalService;
+	}
+
+	/**
+	 * Returns the family persistence.
+	 *
+	 * @return the family persistence
+	 */
+	public familyPersistence getfamilyPersistence() {
+		return familyPersistence;
+	}
+
+	/**
+	 * Sets the family persistence.
+	 *
+	 * @param familyPersistence the family persistence
+	 */
+	public void setfamilyPersistence(familyPersistence familyPersistence) {
+		this.familyPersistence = familyPersistence;
+	}
+
+	/**
 	 * Returns the satff local service.
 	 *
 	 * @return the satff local service
@@ -372,6 +528,43 @@ public abstract class SatffLocalServiceBaseImpl extends BaseLocalServiceImpl
 	 */
 	public void setSatffFinder(SatffFinder satffFinder) {
 		this.satffFinder = satffFinder;
+	}
+
+	/**
+	 * Returns the work local service.
+	 *
+	 * @return the work local service
+	 */
+	public com.shuntian.portlet.intranet.service.workLocalService getworkLocalService() {
+		return workLocalService;
+	}
+
+	/**
+	 * Sets the work local service.
+	 *
+	 * @param workLocalService the work local service
+	 */
+	public void setworkLocalService(
+		com.shuntian.portlet.intranet.service.workLocalService workLocalService) {
+		this.workLocalService = workLocalService;
+	}
+
+	/**
+	 * Returns the work persistence.
+	 *
+	 * @return the work persistence
+	 */
+	public workPersistence getworkPersistence() {
+		return workPersistence;
+	}
+
+	/**
+	 * Sets the work persistence.
+	 *
+	 * @param workPersistence the work persistence
+	 */
+	public void setworkPersistence(workPersistence workPersistence) {
+		this.workPersistence = workPersistence;
 	}
 
 	/**
@@ -550,6 +743,22 @@ public abstract class SatffLocalServiceBaseImpl extends BaseLocalServiceImpl
 		}
 	}
 
+	@BeanReference(type = com.shuntian.portlet.intranet.service.basic_informationLocalService.class)
+	protected com.shuntian.portlet.intranet.service.basic_informationLocalService basic_informationLocalService;
+	@BeanReference(type = basic_informationPersistence.class)
+	protected basic_informationPersistence basic_informationPersistence;
+	@BeanReference(type = com.shuntian.portlet.intranet.service.educationLocalService.class)
+	protected com.shuntian.portlet.intranet.service.educationLocalService educationLocalService;
+	@BeanReference(type = educationPersistence.class)
+	protected educationPersistence educationPersistence;
+	@BeanReference(type = com.shuntian.portlet.intranet.service.ext_informationLocalService.class)
+	protected com.shuntian.portlet.intranet.service.ext_informationLocalService ext_informationLocalService;
+	@BeanReference(type = ext_informationPersistence.class)
+	protected ext_informationPersistence ext_informationPersistence;
+	@BeanReference(type = com.shuntian.portlet.intranet.service.familyLocalService.class)
+	protected com.shuntian.portlet.intranet.service.familyLocalService familyLocalService;
+	@BeanReference(type = familyPersistence.class)
+	protected familyPersistence familyPersistence;
 	@BeanReference(type = com.shuntian.portlet.intranet.service.SatffLocalService.class)
 	protected com.shuntian.portlet.intranet.service.SatffLocalService satffLocalService;
 	@BeanReference(type = com.shuntian.portlet.intranet.service.SatffService.class)
@@ -558,6 +767,10 @@ public abstract class SatffLocalServiceBaseImpl extends BaseLocalServiceImpl
 	protected SatffPersistence satffPersistence;
 	@BeanReference(type = SatffFinder.class)
 	protected SatffFinder satffFinder;
+	@BeanReference(type = com.shuntian.portlet.intranet.service.workLocalService.class)
+	protected com.shuntian.portlet.intranet.service.workLocalService workLocalService;
+	@BeanReference(type = workPersistence.class)
+	protected workPersistence workPersistence;
 	@BeanReference(type = com.liferay.counter.service.CounterLocalService.class)
 	protected com.liferay.counter.service.CounterLocalService counterLocalService;
 	@BeanReference(type = com.liferay.portal.service.ResourceLocalService.class)

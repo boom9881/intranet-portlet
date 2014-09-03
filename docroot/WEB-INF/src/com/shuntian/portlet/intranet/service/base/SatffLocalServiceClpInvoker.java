@@ -114,17 +114,17 @@ public class SatffLocalServiceClpInvoker {
 				"com.shuntian.portlet.intranet.model.Satff"
 			};
 
-		_methodName38 = "getBeanIdentifier";
+		_methodName58 = "getBeanIdentifier";
 
-		_methodParameterTypes38 = new String[] {  };
+		_methodParameterTypes58 = new String[] {  };
 
-		_methodName39 = "setBeanIdentifier";
+		_methodName59 = "setBeanIdentifier";
 
-		_methodParameterTypes39 = new String[] { "java.lang.String" };
+		_methodParameterTypes59 = new String[] { "java.lang.String" };
 
-		_methodName44 = "addsatff";
+		_methodName64 = "addsatff";
 
-		_methodParameterTypes44 = new String[] {
+		_methodParameterTypes64 = new String[] {
 				"java.lang.String", "java.lang.String", "double", "double",
 				"double", "double", "double", "double", "double", "double",
 				"double", "double", "double", "double", "double", "double",
@@ -233,20 +233,20 @@ public class SatffLocalServiceClpInvoker {
 			return SatffLocalServiceUtil.updateSatff((com.shuntian.portlet.intranet.model.Satff)arguments[0]);
 		}
 
-		if (_methodName38.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes38, parameterTypes)) {
+		if (_methodName58.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes58, parameterTypes)) {
 			return SatffLocalServiceUtil.getBeanIdentifier();
 		}
 
-		if (_methodName39.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes39, parameterTypes)) {
+		if (_methodName59.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes59, parameterTypes)) {
 			SatffLocalServiceUtil.setBeanIdentifier((java.lang.String)arguments[0]);
 
 			return null;
 		}
 
-		if (_methodName44.equals(name) &&
-				Arrays.deepEquals(_methodParameterTypes44, parameterTypes)) {
+		if (_methodName64.equals(name) &&
+				Arrays.deepEquals(_methodParameterTypes64, parameterTypes)) {
 			return SatffLocalServiceUtil.addsatff((java.lang.String)arguments[0],
 				(java.lang.String)arguments[1],
 				((Double)arguments[2]).doubleValue(),
@@ -306,10 +306,10 @@ public class SatffLocalServiceClpInvoker {
 	private String[] _methodParameterTypes16;
 	private String _methodName17;
 	private String[] _methodParameterTypes17;
-	private String _methodName38;
-	private String[] _methodParameterTypes38;
-	private String _methodName39;
-	private String[] _methodParameterTypes39;
-	private String _methodName44;
-	private String[] _methodParameterTypes44;
+	private String _methodName58;
+	private String[] _methodParameterTypes58;
+	private String _methodName59;
+	private String[] _methodParameterTypes59;
+	private String _methodName64;
+	private String[] _methodParameterTypes64;
 }
